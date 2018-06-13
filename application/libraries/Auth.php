@@ -61,7 +61,7 @@ class Auth
         if($nome && $logged && $id_usuario){
 
           $array = array('id_metodo' => $id_metodo, 'id_usuario' => $id_usuario);
-          $qryPermissoes = $this->CI->db->$this->CI->db->where($array)get('permissoes');
+          $qryPermissoes = $this->CI->db->$this->CI->db->where($array)->get('permissoes');
           $resultPermissoes = $qryPermissoes->result();
 
           /*
